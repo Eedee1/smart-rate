@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VAT Calculator — SmartRate Tools</title>
+  <meta name="description" content="Calculate VAT inclusive or exclusive amounts." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>VAT Calculator</h1>
+
+    <div class="tool-card">
+      <label>Amount
+        <input id="vatAmount" type="number" placeholder="e.g. 1000" />
+      </label>
+
+      <label>VAT rate (%)
+        <input id="vatRate" type="number" placeholder="e.g. 7.5" />
+      </label>
+
+      <button class="btn" onclick="calculateVAT()">Calculate</button>
+
+      <div id="vatResult" class="result"></div>
+    </div>
+
+    <section class="explain">
+      <p>Use this to get VAT amount and total cost including VAT. Good for invoices and pricing checks.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
