@@ -2,22 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Loan Interest Calculator — SmartRate Tools</title>
-  <meta name="description" content="Simple and compound loan interest calculator." />
+  <title>Loan Interest Calculator — SmartRate</title>
+  <meta name="description" content="Calculate loan totals and monthly payments quickly with SmartRate loan calculator." />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ADSENSE_VERIFICATION_CODE_HERE -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
-  <main class="container">
-    <h1>Loan Interest Calculator</h1>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">SmartRate</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="loan-calculator.html" aria-current="page">Loan</a>
+      </nav>
+      <div class="kebab-wrap">
+        <button class="kebab" aria-label="menu"><span class="dot"></span><span class="dot"></span><span class="dot"></span></button>
+        <div class="kebab-menu">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <div class="tool-card">
-      <label>Loan principal
+  <main class="container">
+    <h1 class="page-title">Loan Interest Calculator</h1>
+    <p class="lead">Estimate total repayment and monthly payment for simple loans.</p>
+
+    <div class="ad-slot"><div class="ad-label">AD SLOT — TOP</div></div>
+
+    <section class="tool-card">
+      <label>Loan principal (amount)
         <input id="loanAmount" type="number" placeholder="e.g. 5000" />
       </label>
 
-      <label>Annual interest rate (%) 
+      <label>Annual interest rate (%)
         <input id="interestRate" type="number" placeholder="e.g. 5" />
       </label>
 
@@ -25,16 +45,25 @@
         <input id="loanYears" type="number" placeholder="e.g. 2" />
       </label>
 
-      <button class="btn" onclick="calculateLoan()">Calculate</button>
+      <div style="margin-top:10px">
+        <button class="btn" onclick="calculateLoan()">Calculate</button>
+        <button class="btn secondary" onclick="location.href='converter.html'">Currency Converter</button>
+      </div>
 
-      <div id="loanResult" class="result"></div>
-    </div>
+      <div id="loanResult" class="result" aria-live="polite"></div>
+      <div class="meta">Note: Monthly payment uses standard amortization formula.</div>
+    </section>
+
+    <div class="ad-slot"><div class="ad-label">AD SLOT — MIDDLE</div></div>
 
     <section class="explain">
-      <h2>How this works</h2>
-      <p>This computes both simple interest and total payable. For precise monthly amortization you can expand this tool later.</p>
+      <h2>About this calculator</h2>
+      <p>Use this calculator for simple budgeting. For mortgages or complex loans consider using an amortization schedule and consult a financial professional.</p>
     </section>
+
+    <div class="ad-slot"><div class="ad-label">AD SLOT — BOTTOM</div></div>
   </main>
+
   <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
   <script src="script.js"></script>
 </body>
