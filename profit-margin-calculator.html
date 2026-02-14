@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Profit Margin Calculator — SmartRate Tools</title>
+  <meta name="description" content="Calculate profit margin from revenue and cost." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>Profit Margin Calculator</h1>
+
+    <div class="tool-card">
+      <label>Revenue
+        <input id="revenue" type="number" placeholder="e.g. 200" />
+      </label>
+
+      <label>Cost
+        <input id="costMargin" type="number" placeholder="e.g. 120" />
+      </label>
+
+      <button class="btn" onclick="calculateProfitMargin()">Calculate</button>
+      <div id="profitResult" class="result"></div>
+    </div>
+
+    <section class="explain"><p>Profit margin = (revenue - cost) / revenue × 100%. Useful for quick pricing checks.</p></section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
