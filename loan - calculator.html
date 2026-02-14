@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Loan Interest Calculator — SmartRate Tools</title>
+  <meta name="description" content="Simple and compound loan interest calculator." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>Loan Interest Calculator</h1>
+
+    <div class="tool-card">
+      <label>Loan principal
+        <input id="loanAmount" type="number" placeholder="e.g. 5000" />
+      </label>
+
+      <label>Annual interest rate (%) 
+        <input id="interestRate" type="number" placeholder="e.g. 5" />
+      </label>
+
+      <label>Term (years)
+        <input id="loanYears" type="number" placeholder="e.g. 2" />
+      </label>
+
+      <button class="btn" onclick="calculateLoan()">Calculate</button>
+
+      <div id="loanResult" class="result"></div>
+    </div>
+
+    <section class="explain">
+      <h2>How this works</h2>
+      <p>This computes both simple interest and total payable. For precise monthly amortization you can expand this tool later.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
