@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://smart-rate.netlify.app/</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://smart-rate.netlify.app/about.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://smart-rate.netlify.app/privacy.html</loc>
-    <priority>0.8</priority>
-  </url>
-
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/converter.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/salary-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/loan-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/vat-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/inflation-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/markup-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/profit-margin-calculator.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/about.html</loc></url>
+  <url><loc>https://YOUR-SITE-NAME.netlify.app/privacy.html</loc></url>
 </urlset>
