@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Currency Converter — SmartRate Tools</title>
+  <meta name="description" content="Free live currency converter with fallback APIs and caching." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ADSENSE_VERIFICATION_CODE_HERE -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">SmartRate Tools</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="salary-calculator.html">Salary</a>
+        <a href="loan-calculator.html">Loan</a>
+        <a href="vat-calculator.html">VAT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Currency Converter</h1>
+
+    <div class="tool-card">
+      <div class="row">
+        <label>Amount
+          <input id="amount" type="number" value="1" step="any" />
+        </label>
+
+        <label>From
+          <select id="fromCurrency">
+            <option>USD</option><option>EUR</option><option>GBP</option><option>NGN</option><option>INR</option><option>CAD</option><option>AED</option>
+          </select>
+        </label>
+
+        <label>To
+          <select id="toCurrency">
+            <option>NGN</option><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option><option>CAD</option><option>AED</option>
+          </select>
+        </label>
+
+        <button id="convertBtn" class="btn">Convert</button>
+      </div>
+
+      <div class="status-row">
+        Status: <span id="apiStatus">—</span>
+      </div>
+
+      <div id="result" class="result"></div>
+      <div id="rateInfo" class="meta"></div>
+      <div id="errorMsg" class="error" role="alert"></div>
+
+      <div class="note">
+        <p><strong>Note:</strong> If live rates are temporarily unavailable the tool will show the last known cached rate.</p>
+      </div>
+    </div>
+
+    <section class="explain">
+      <h2>How it works</h2>
+      <p>This converter uses free public exchange APIs and stores recent rates in your browser for 10 minutes to reduce calls and improve reliability. The site attempts multiple APIs if the primary fails.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© 2026 SmartRate Tools</small></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
