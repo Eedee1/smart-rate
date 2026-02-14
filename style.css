@@ -1,46 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    text-align: center;
-}
-
-header {
-    background: #1e88e5;
-    color: white;
-    padding: 15px;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.container {
-    margin-top: 40px;
-}
-
-input, select, button {
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-}
-
-button {
-    background: #1e88e5;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1565c0;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 15px;
-    background: #222;
-    color: white;
-}
+:root{--accent:#0d47a1;--bg:#f2f4f8;--card:#ffffff;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+.container{max-width:980px;margin:24px auto;padding:0 16px}
+.site-header{background:var(--accent);color:#fff;padding:14px 0}
+.nav-row{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:700;color:#fff;text-decoration:none;margin-left:8px}
+.main-nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
+.card{background:var(--card);padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(13,71,161,0.06);text-align:left}
+.tool-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+label{display:flex;flex-direction:column;font-size:14px}
+input,select{padding:10px;border-radius:8px;border:1px solid #e5e7eb;margin-top:6px}
+.btn{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+.btn.small{padding:8px 10px}
+.result{margin-top:12px;font-weight:600}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
+.error{color:#b00020;margin-top:8px}
+.status-row{margin-top:8px;font-size:14px}
+.site-footer{background:#0f1724;color:#c7d2fe;padding:12px 0;margin-top:30px;text-align:center}
+.explain{margin-top:18px;text-align:left}
+@media (max-width:640px){.nav-row{flex-direction:column;gap:10px}.card-grid{grid-template-columns:1fr}}
