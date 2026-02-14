@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Inflation Calculator — SmartRate Tools</title>
+  <meta name="description" content="Estimate future value given inflation rate." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>Inflation Calculator</h1>
+
+    <div class="tool-card">
+      <label>Current amount
+        <input id="initialAmount" type="number" placeholder="e.g. 1000" />
+      </label>
+
+      <label>Annual inflation rate (%)
+        <input id="inflationRate" type="number" placeholder="e.g. 5" />
+      </label>
+
+      <label>Years
+        <input id="yearsInflation" type="number" placeholder="e.g. 10" />
+      </label>
+
+      <button class="btn" onclick="calculateInflation()">Calculate</button>
+
+      <div id="inflationResult" class="result"></div>
+    </div>
+
+    <section class="explain">
+      <p>Understand how purchasing power declines as inflation erodes the value of money over time.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
