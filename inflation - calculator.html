@@ -2,38 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Inflation Calculator — SmartRate Tools</title>
-  <meta name="description" content="Estimate future value given inflation rate." />
+  <title>Inflation Calculator — SmartRate</title>
+  <meta name="description" content="Inflation calculator — estimate future value after inflation." />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ADSENSE_VERIFICATION_CODE_HERE -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
-  <main class="container">
-    <h1>Inflation Calculator</h1>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">SmartRate</a>
+      <nav class="main-nav"><a href="index.html">Home</a><a href="inflation-calculator.html" aria-current="page">Inflation</a></nav>
+      <div class="kebab-wrap">
+        <button class="kebab" aria-label="menu"><span class="dot"></span><span class="dot"></span><span class="dot"></span></button>
+        <div class="kebab-menu"><a href="about.html">About</a><a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+  </header>
 
-    <div class="tool-card">
+  <main class="container">
+    <h1 class="page-title">Inflation Calculator</h1>
+    <p class="lead">Estimate how inflation will change purchasing power over time.</p>
+
+    <div class="ad-slot"><div class="ad-label">AD SLOT — TOP</div></div>
+
+    <section class="tool-card">
       <label>Current amount
         <input id="initialAmount" type="number" placeholder="e.g. 1000" />
       </label>
-
       <label>Annual inflation rate (%)
         <input id="inflationRate" type="number" placeholder="e.g. 5" />
       </label>
-
       <label>Years
         <input id="yearsInflation" type="number" placeholder="e.g. 10" />
       </label>
+      <div style="margin-top:10px">
+        <button class="btn" onclick="calculateInflation()">Calculate</button>
+      </div>
+      <div id="inflationResult" class="result" aria-live="polite"></div>
+    </section>
 
-      <button class="btn" onclick="calculateInflation()">Calculate</button>
-
-      <div id="inflationResult" class="result"></div>
-    </div>
+    <div class="ad-slot"><div class="ad-label">AD SLOT — MIDDLE</div></div>
 
     <section class="explain">
-      <p>Understand how purchasing power declines as inflation erodes the value of money over time.</p>
+      <p>Explanation: Future value = present × (1 + inflation)^years. This helps planning savings and long-term budgets.</p>
     </section>
+
+    <div class="ad-slot"><div class="ad-label">AD SLOT — BOTTOM</div></div>
   </main>
+
   <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
   <script src="script.js"></script>
 </body>
