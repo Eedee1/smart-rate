@@ -1,18 +1,12 @@
-# Smart Rate
+# SmartRate Tools
 
-Smart Rate is a free online currency converter website.
+SmartRate Tools — free currency converter and finance calculators (salary, VAT, loan, inflation, markup, profit margin).
 
-## Features
-- Live currency conversion
-- Simple and fast interface
-- Mobile friendly design
+## Quick deploy
+1. Push files to GitHub repo root.
+2. On Netlify: New site → Import from Git → choose repo → Deploy.
+3. Update sitemap.xml & robots.txt with your Netlify site name and submit sitemap in Google Search Console.
 
-## Pages
-- Home
-- About
-- Privacy Policy
-
-## Deployment
-This website is deployed using Netlify and hosted via GitHub.
-
-© 2026 Smart Rate
+## Notes
+- Converter uses free public APIs and client-side caching.
+- For AdSense: add verification meta into head where <!-- ADSENSE_VERIFICATION_CODE_HERE --> is.
