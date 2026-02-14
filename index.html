@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Rate - Live Currency Converter</title>
+    <meta name="description" content="Free live currency converter and exchange rate calculator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Smart Rate</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Live Currency Converter</h2>
+
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="NGN">NGN</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <select id="toCurrency">
+        <option value="NGN">NGN</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <p id="result"></p>
+</div>
+
+<footer>
+    <p>© 2026 Smart Rate. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
