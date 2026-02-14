@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Markup Calculator — SmartRate Tools</title>
+  <meta name="description" content="Calculate selling price from cost and markup percentage." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>Markup Calculator</h1>
+
+    <div class="tool-card">
+      <label>Cost price
+        <input id="cost" type="number" placeholder="e.g. 50" />
+      </label>
+      <label>Markup % 
+        <input id="markup" type="number" placeholder="e.g. 30" />
+      </label>
+      <button class="btn" onclick="calculateMarkup()">Calculate</button>
+      <div id="markupResult" class="result"></div>
+    </div>
+
+    <section class="explain"><p>Enter cost and markup percentage to see the selling price.</p></section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
