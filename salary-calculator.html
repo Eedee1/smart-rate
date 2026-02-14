@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Salary to Hourly Calculator — SmartRate Tools</title>
+  <meta name="description" content="Convert annual salary to hourly pay. Salary to hourly calculator." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav-row"><a class="brand" href="index.html">SmartRate</a></div></header>
+  <main class="container">
+    <h1>Salary to Hourly Calculator</h1>
+
+    <div class="tool-card">
+      <label>Annual Salary
+        <input id="annualSalary" type="number" placeholder="e.g. 30000" />
+      </label>
+
+      <label>Hours per week
+        <input id="hoursPerWeek" type="number" placeholder="e.g. 40" />
+      </label>
+
+      <label>Weeks per year
+        <input id="weeksPerYear" type="number" placeholder="e.g. 52" value="52" />
+      </label>
+
+      <button class="btn" onclick="calculateSalary()">Calculate</button>
+
+      <div id="salaryResult" class="result"></div>
+    </div>
+
+    <section class="explain">
+      <h2>What this tells you</h2>
+      <p>The calculator divides annual salary by (weeks × hours/week) to estimate hourly pay. Use it to compare jobs or set freelance rates.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© 2026 SmartRate Tools</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
