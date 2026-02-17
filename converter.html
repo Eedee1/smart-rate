@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Currency Converter & Calculators — Smart Rate</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Live currency converter and essential finance calculators." />
+  <!-- ADSENSE_VERIFICATION_CODE_HERE -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="/">Smart Rate</a>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Currency Converter</h1>
+
+    <div class="tool-card">
+      <form id="converter-form">
+        <div class="row">
+          <label>Amount
+            <input id="amount" type="number" value="1" step="any" />
+          </label>
+          <label>From
+            <select id="from-currency">
+              <option>USD</option><option>EUR</option><option>GBP</option><option>NGN</option><option>INR</option>
+            </select>
+          </label>
+          <label>To
+            <select id="to-currency">
+              <option>NGN</option><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Convert</button>
+        </div>
+      </form>
+
+      <div class="status-row">Status: <span id="rate-status">—</span></div>
+      <div class="result" id="converted-value">—</div>
+      <div class="meta" id="rate-info"></div>
+    </div>
+
+    <div id="salary" class="tool-card">
+      <h2>Salary → Hourly</h2>
+      <label>Annual salary <input id="annualSalary" type="number" placeholder="30000" /></label>
+      <label>Hours per week <input id="hoursPerWeek" type="number" value="40" /></label>
+      <label>Weeks per year <input id="weeksPerYear" type="number" value="52" /></label>
+      <button class="btn" onclick="calculateSalary()">Calculate</button>
+      <div class="result" id="salaryResult"></div>
+    </div>
+
+    <div id="vat" class="tool-card">
+      <h2>VAT Calculator</h2>
+      <label>Amount <input id="vatAmount" type="number" /></label>
+      <label>VAT rate (%) <input id="vatRate" type="number" value="7.5" /></label>
+      <button class="btn" onclick="calculateVAT()">Calculate</button>
+      <div class="result" id="vatResult"></div>
+    </div>
+
+    <div id="loan" class="tool-card">
+      <h2>Loan Calculator</h2>
+      <label>Loan amount <input id="loanAmount" type="number" /></label>
+      <label>Annual rate (%) <input id="interestRate" type="number" /></label>
+      <label>Years <input id="loanYears" type="number" /></label>
+      <button class="btn" onclick="calculateLoan()">Calculate</button>
+      <div class="result" id="loanResult"></div>
+    </div>
+
+    <div class="ad-slot">AD SLOT — MIDDLE (placeholder)</div>
+  </main>
+
+  <footer class="site-footer container"><small>© Smart Rate</small></footer>
+
+  <script src="scripts/converter.js" defer></script>
+</body>
+</html>
