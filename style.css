@@ -1,0 +1,18 @@
+:root{--accent:#0d6efd;--bg:#fff;--muted:#6b7280;--maxw:980px}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+.container{max-width:var(--maxw);margin:0 auto;padding:16px}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #eee}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.main-nav a{margin-left:12px;color:#111;text-decoration:none}
+.lead{color:var(--muted)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+.card{display:block;padding:16px;background:#fafafa;border-radius:8px;text-decoration:none;color:inherit}
+.tool-card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.04);margin:16px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+label{display:flex;flex-direction:column;font-size:13px}
+input,select{padding:10px;border-radius:8px;border:1px solid #eef3ff;background:#fff}
+.btn{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+.result{margin-top:10px;font-weight:700}
+.ad-slot{border:1px dashed #dbeafe;padding:12px;border-radius:8px;color:#2563eb;margin-top:12px}
+@media(max-width:600px){.row{flex-direction:column}}
