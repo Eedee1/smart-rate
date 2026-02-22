@@ -1,0 +1,22 @@
+<% layout('layout') -%>
+<section class="tool">
+  <h2>Salary → Hourly</h2>
+
+  <form id="salary-form" onsubmit="return false;">
+    <label>Annual salary
+      <input type="number" id="annual" value="30000" step="any" />
+    </label>
+
+    <label>Hours per week
+      <input type="number" id="hours" value="40" />
+    </label>
+
+    <label>Weeks per year
+      <input type="number" id="weeks" value="52" />
+    </label>
+
+    <button id="salary-calc" class="btn">Calculate hourly</button>
+  </form>
+
+  <div id="salary-result" class="result">Hourly: —</div>
+</section>
