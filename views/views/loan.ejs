@@ -1,0 +1,22 @@
+<% layout('layout') -%>
+<section class="tool">
+  <h2>Loan Calculator</h2>
+
+  <form id="loan-form" onsubmit="return false;">
+    <label>Loan amount
+      <input type="number" id="loan-amount" step="any" />
+    </label>
+
+    <label>Annual interest rate (%)
+      <input type="number" id="loan-rate" value="10" step="any" />
+    </label>
+
+    <label>Term (years)
+      <input type="number" id="loan-years" value="5" />
+    </label>
+
+    <button id="loan-calc" class="btn">Calculate monthly payment</button>
+  </form>
+
+  <div id="loan-result" class="result">—</div>
+</section>
