@@ -1,0 +1,23 @@
+<% layout('layout') -%>
+<section class="tool">
+  <h2>Currency Converter</h2>
+
+  <form id="convert-form" class="form-inline" onsubmit="return false;">
+    <label>Amount
+      <input type="number" id="amount" value="1" step="any" required />
+    </label>
+
+    <label>From
+      <select id="from"></select>
+    </label>
+
+    <label>To
+      <select id="to"></select>
+    </label>
+
+    <button id="convert-btn" class="btn">Convert</button>
+  </form>
+
+  <div id="convert-result" class="result" aria-live="polite">Status: —</div>
+  <small class="muted">Note: rates are fetched server-side and cached for 1 hour to prevent flicker / failures.</small>
+</section>
