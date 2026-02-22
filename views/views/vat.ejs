@@ -1,0 +1,18 @@
+<% layout('layout') -%>
+<section class="tool">
+  <h2>VAT Calculator</h2>
+
+  <form id="vat-form" onsubmit="return false;">
+    <label>Amount
+      <input type="number" id="vat-amount" step="any" />
+    </label>
+
+    <label>VAT rate (%)
+      <input type="number" id="vat-rate" value="7.5" step="any" />
+    </label>
+
+    <button id="vat-calc" class="btn">Calculate</button>
+  </form>
+
+  <div id="vat-result" class="result">—</div>
+</section>
