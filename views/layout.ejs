@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Rate — Tools</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <button id="menu-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="brand">Smart Rate</a>
+  </header>
+
+  <nav id="side-nav" class="side-nav" aria-hidden="true">
+    <ul>
+      <li><a href="/currency">Currency Converter</a></li>
+      <li><a href="/salary">Salary → Hourly</a></li>
+      <li><a href="/vat">VAT Calculator</a></li>
+      <li><a href="/loan">Loan Calculator</a></li>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <%= body %>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
