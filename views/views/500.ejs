@@ -1,0 +1,12 @@
+<% layout('layout') -%>
+
+<section class="tool">
+  <h2>Something went wrong</h2>
+  <p>Sorry — an internal error occurred.</p>
+
+  <% if (error && error.message) { %>
+    <pre style="white-space:pre-wrap;background:#fff;border:1px solid #eee;padding:8px;border-radius:6px;">Error: <%= error.message %></pre>
+  <% } %>
+
+  <p><a href="/">Return home</a></p>
+</section>
