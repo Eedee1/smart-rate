@@ -125,4 +125,58 @@ app.get('/api/convert', async (req, res) => {
   }
 });
 
+// require at top of file (if not already)
+const fs = require('fs');
+const path = require('path');
+
+// ---- 404 handler (after all routes) ----
+app.use((req, res, next) => {
+  res.status(404);
+
+  // Prefer server-side EJS view if available
+  try {
+    const viewsDir = app.get('views') || path.join(__dirname, 'views');
+    const viewFile = path.join(viewsDir, '404.ejs');
+
+    if (req.accepts('html') && fs.existsSync(viewFile)) {
+      return res.render('404', { url: req.originalUrl });
+    }
+
+    // If no EJS view, serve static fallback if it exists
+    const static404 = path.join(__dirname, 'public', '404.html');
+    if (req.accepts('html') && fs.existsSync(static404)) {
+      return res.status(404).sendFile(static404);
+    }
+
+    if (req.accepts('json')) {
+      return res.json({ error: 'Not found' });
+    }
+    res.type('txt').send('Not found');
+  } catch (err) {
+    // If anything unexpected happens, forward to error handler
+    next(err);
+  }
+});
+
+// ---- Generic error handler (last middleware) ----
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err && (err.stack || err.message || err));
+  res.status(err.status || 500);
+
+  // Prefer EJS 500 view if it exists
+  try {
+    const viewsDir = app.get('views') || path.join(__dirname, 'views');
+    const errView = path.join(viewsDir, '500.ejs');
+    if (req.accepts('html') && fs.existsSync(errView)) {
+      return res.render('500', { error: err });
+    }
+
+    // fallback JSON/text
+    if (req.accepts('json')) return res.json({ error: err.message || 'Server error' });
+    res.type('txt').send('Server error');
+  } catch (renderErr) {
+    // final fallback
+    res.type('txt').send('Server error');
+  }
+});
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
